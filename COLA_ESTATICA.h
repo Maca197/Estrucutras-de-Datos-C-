@@ -46,7 +46,7 @@ bool Cola_Estatica<T, n>::full() const
 {
     return queueSize == containerSize;
 }
-//TAMAÑO ACTUAL?  NUMERO DE ELEMENTOS AÑADIDOS
+//TAMAÃ‘O ACTUAL?  NUMERO DE ELEMENTOS AÃ‘ADIDOS
 template<typename T, size_t n>
 size_t Cola_Estatica<T, n>::size() const
 {
@@ -72,14 +72,14 @@ const T& Cola_Estatica<T, n>::back() const
         return elements[backIndex-1];
 
 }
-//AÑADIR ELEMENTOS
+//AÃ‘ADIR ELEMENTOS
 template<typename T, size_t n>
 void Cola_Estatica<T,n>::push(const T& element)
 {
     if(full())
         throw range_error("Trying push(const &element) on full queue");
     elements[backIndex] = element;
-    backIndex = (backIndex +1) % containerSize; //HACE CIRCULAR LA COLA, EN CASO DE QUE HAYA LLEGADO AL ULTIMO URA AL FINAL
+    backIndex = (backIndex +1) % containerSize;
     ++queueSize;
 }
 //ELIMINAR ELEMENTOS
